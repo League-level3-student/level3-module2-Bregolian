@@ -69,9 +69,41 @@ public class Algorithms {
 			}
 			output.add(current);
 			message2.remove(index);
-			System.out.println(message2.size());
 		}
-		System.out.println(output);
 		return output;
+	}
+	
+	public static List<String> sortDNA(List<String> a){
+		ArrayList<String> b = new ArrayList<>(a);
+		boolean swap = true;
+		while(swap) {
+			swap = false;
+			for (int i = 0; i < b.size()-1; i++) {
+				if (b.get(i).length() > b.get(i+1).length()) {
+					String temp = b.get(i+1);
+					b.set(i+1, b.get(i));
+					b.set(i, temp);
+					swap = true;
+				}
+			}
+		}
+		return b;
+	}
+	
+	public static List<String> sortWords(List<String> a){
+		List<String> b = a;
+		boolean swap = true;
+		while(swap) {
+			for (int i = 0; i < b.size()-1; i++) {
+				if (b.get(i).compareTo(b.get(i+1)) < 0) {
+					String temp = b.get(i+1);
+					b.set(i+1, b.get(i));
+					b.set(i, temp);
+					swap = true;
+				}
+			}
+		}
+		System.out.println(b);
+		return b;
 	}
 }
