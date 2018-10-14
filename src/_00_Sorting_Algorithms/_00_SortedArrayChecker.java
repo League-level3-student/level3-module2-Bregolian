@@ -6,14 +6,38 @@ public class _00_SortedArrayChecker {
 	//   and it returns a boolean.
 	//   The method returns true if the integer
 	//   array is in ascending order and false otherwise
-
+	public static boolean intArraySorted(int[] a) {
+		boolean output = true;
+		int currentInt = a[0];
+		for (int i = 1; i < a.length; i++) {
+			if (a[i]>=currentInt) {
+				currentInt = a[i];
+			}
+			else {
+				output = false;
+			}
+		}
+		return output;
+	}
 	
 	//2. Write a static method called doubleArraySorted. 
 	//   This method takes in an array of doubles
 	//   and it returns a boolean.
 	//   The method returns true if the double
 	//   array is in ascending order and false otherwise
-
+	public static boolean doubleArraySorted(double[] a) {
+		boolean output = true;
+		double currentDouble = a[0];
+		for (int i = 1; i < a.length; i++) {
+			if (a[i]>=currentDouble) {
+				currentDouble = a[i];
+			}
+			else {
+				output = false;
+			}
+		}
+		return output;
+	}
 	
 	//3. Write a static method called charArraySorted. 
 	//   This method takes in an array of characters
@@ -21,7 +45,19 @@ public class _00_SortedArrayChecker {
 	//   The method returns true if the character
 	//   array is in alphabetical order and false otherwise
 	//   (You can compare characters just like integers)
-
+	public static boolean charArraySorted(char[] a) {
+		boolean output = true;
+		char currentChar = a[0];
+		for (int i = 1; i < a.length; i++) {
+			if (a[i]>=currentChar) {
+				currentChar = a[i];
+			}
+			else {
+				output = false;
+			}
+		}
+		return output;
+	}
 	
 	//4. Write a static method called stringArraySorted. 
 	//   This method takes in an array of Strings
@@ -29,5 +65,17 @@ public class _00_SortedArrayChecker {
 	//   The method returns true if the String
 	//   array is in alphabetical order and false otherwise
 	//   (Use the compareTo(String) method)
-
+	public static boolean stringArraySorted(String[] a) {
+		boolean output = true;
+		String currentString = a[0];
+		for (int i = 1; i < a.length; i++) {
+			if (a[i].compareTo(currentString) >= 0) {
+				currentString= a[i];
+			}
+			else {
+				output = false;
+			}
+		}
+		return output;
+	}
 }
